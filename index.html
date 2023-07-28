@@ -15,28 +15,45 @@
             </div>
         </div>
         <form action="" method="post" class="right">
-            <div class="top">Lose money for free! Just enter your personal and credit card information below. Watch you checking account disappear!</div>
+            <div class="top">Lose money for free! Just enter your personal and credit card information below. Watch your checking account disappear!</div>
             <div class="middle">
-                <item>
-                    <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" id="first-name" required>
-                </item>
-                <div class="item">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" name="last-name" id="last-name" required>
+                <div class="item-header">Enter Your Private Information!</div>
+                
+                <div class="item-cont">
+                    <div class="item">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" pattern="[a-zA-Z]+" oninvalid="this.setCustomValidity('Enter Valid Name'); this.style.border='1px solid red'"
+                        oninput="this.setCustomValidity(''); this.style.border='2px solid cadetblue'" onblur="this.style.border='2px solid darkgrey'" autocomplete="given-name" required>
                 </div>
-                <div class="item">
-                    <label for="credit-card">Credit Card</label>
-                    <input type="text" name="credit-card" id="credit-card" required>
-                </div>
-                <div class="item">
-                    <label for="cvn">CVN</label>
-                    <input type="text" name="cvn" id="cvn" required>
+                    <div class="item">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" pattern="[a-zA-Z]+" oninvalid="this.setCustomValidity('Enter Valid Name')"
+                        oninput="this.setCustomValidity(''); this.style.border='2px solid cadetblue'" onblur="this.style.border='2px solid darkgrey'" autocomplete="family-name" required>
+                    </div>
+                    <div class="item">
+                        <label for="credit-card">Credit Card</label>
+                        <input type="text" name="credit-card" id="credit-card" pattern="[0-9]{13,16}" oninvalid="this.setCustomValidity('Enter Valid Credit Card')"
+                        oninput="this.setCustomValidity(''); this.style.border='2px solid cadetblue'" onblur="this.style.border='2px solid darkgrey'" autocomplete="cc-number" required>
+                    </div>
+                    <div class="item">
+                        <label for="cvn">CVN</label>
+                        <input type="text" name="cvn" id="cvn" pattern="[0-9]{3}" oninvalid="this.setCustomValidity('Enter Valid CVN')"
+                        oninput="this.setCustomValidity(''); this.style.border='2px solid cadetblue'" onblur="this.style.border='2px solid darkgrey'" autocomplete="cc-csc" required>
+                    </div>
+                    <div class="item">
+                        <label for="ssn">SSN</label>
+                        <input type="text" name="ssn" id="ssn" pattern="[0-9]{9}" oninvalid="this.setCustomValidity('Enter Valid Name')"
+                        oninput="this.setCustomValidity(''); this.style.border='2px solid cadetblue'" onblur="this.style.border='2px solid darkgrey'" required>
+                    </div>
+                    <div class="item">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" id="dob" autocomplete="bday" oninput="this.style.border='2px solid cadetblue'" onblur="this.style.border='2px solid darkgrey'" required>
+                    </div>
                 </div>
             </div>
             <div class="bottom">
-                <button type="submit">$$$$</button>
-                <div class="sub">Already given all your money? Take out a <a href="">Mortgage</a>!</div>
+                    <button type="submit">-$$$$</button>
+                    <div class="sub">Already given all your money? Take out a <a href="">Mortgage</a>!</div>
             </div>
         </form>
     </div>

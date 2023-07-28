@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --mid-padding: 20px;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -7,11 +11,136 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: slategrey;    
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1540px;
+    display: flex;
+    flex-wrap: wrap;
     background-color: whitesmoke;
+    filter: drop-shadow(0px 0px 5px black);
 }
 
 .left {
     background-image: url(./img/fry.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 1 1 50%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(181, 197, 197);
+}
+
+.left > .middle {
+    background-color: rgba(50, 50, 50, .2);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 0 1 100px;
+    color: white;
+    font-weight: bolder;
+    font-size: 64px;
+    text-align: center;
+}
+
+.right {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top, .bottom {
+    flex: 1 1 33%;
+    align-items: center;
+    display: flex;
+}
+
+.top {
+    font-size: 28px;
+    padding: 0px 64px;
+}
+
+.right > .middle {
+    padding: var(--mid-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: white;
+    box-shadow: 0px 1px 3px grey;
+    align-content: center;
+    padding-bottom: 32px;
+}
+
+.item-header {
+    width: 100%;
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: -16px;
+}
+
+.item-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px 64px;
+    align-content: flex-start;
+}
+
+.bottom {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+button {
+    margin:16px;
+    min-width: 150px;
+    flex: 0 1 35px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    border-style: none;
+    filter: drop-shadow(0 3px 3px grey);
+    color: white;
+    font-size: large;
+}
+
+button:hover{
+    background-color: slategray;
+}
+
+.bottom > div {
+    margin: 0 16px;
+}
+
+.item {
+    color:darkslategray;
+    display: flex;
+    flex: 0 1 30%;
+    flex-direction: column;
+    min-width: 105px;
+}
+
+input {
+    border-radius: 5px;
+    border: 2px solid darkgrey;
+    min-height: 20px;
+    padding: 1px;
+}
+
+input:focus-within {
+    outline: none;
+    border: 2px solid cadetblue;
+    filter: drop-shadow(0px 0px 1px black);
 }
 
 .footer {
@@ -23,13 +152,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%;
     padding: 20px;
+    width: 100%;
     font-size: 20px;
+    background-color:cadetblue;
+    color: white;
 }
 
 .fa-github {
-    color: black;
+    color: white    ;
     font-size: 24px;
     transition: transform 0.3s ease-in-out;
 }
